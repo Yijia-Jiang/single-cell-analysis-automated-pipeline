@@ -1,0 +1,91 @@
+
+#find . $PWD -name '*.narrowPeak.bed' 2>/dev/null
+Project: single-cell analysis pipeline
+author: Yijia Jiang
+date: 20240502
+
+ref: hg38
+  
+metasheet: "metasheet.csv"
+custom_marker_list: "custom_marker_list.csv"
+
+nCount_RNA_min: 200
+nCount_RNA_max: 8000
+mito_rate_max: 5
+
+# markers = ["a", "b", c] # can modify function in plot directory
+
+rna_countsamples:
+ BI54_rna: /mnt/cfce-rcsm/projects/yijiajiang_analysis/20231207_Ellisen_fixed_scRNA/cellranger/Ellisen_BCA/per_sample_outs/BI54/count/sample_filtered_feature_bc_matrix.h5
+ MGH23039R_rna: /mnt/cfce-rcsm/projects/yijiajiang_analysis/20231207_Ellisen_fixed_scRNA/cellranger/Ellisen_BCA/per_sample_outs/MGH23039R/count/sample_filtered_feature_bc_matrix.h5
+ BA-1_209_NormR_rna: /mnt/cfce-rcsm/projects/yijiajiang_analysis/20230823_fixed_scRNA_11278/cellranger/BRA_deepseq_twoLib/BCA_usethis/per_sample_outs/BA-1_209_NormR/count/sample_filtered_feature_bc_matrix.h5
+ BA-8_374_NormL_rna: /mnt/cfce-rcsm/projects/yijiajiang_analysis/20230823_fixed_scRNA_11278/cellranger/BRA_deepseq_twoLib/BCA_usethis/per_sample_outs/BA-8_374_NormL/count/sample_filtered_feature_bc_matrix.h5
+
+
+# project: scATAC
+
+peak_region_fragments_min: 100
+peak_region_fragments_max: 20000
+pct_reads_in_peaks: 15
+nucleosome_signal: 4
+
+atac_countsamples:
+  M1_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M1/outs/filtered_peak_bc_matrix.h5
+  M2_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M2/outs/filtered_peak_bc_matrix.h5  
+  B1_7218: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B1_7218/outs/filtered_peak_bc_matrix.h5
+  B2_7157: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B2_7157/outs/filtered_peak_bc_matrix.h5
+  
+atac_fragments:
+  M1_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M1/outs/fragments.tsv.gz
+  M2_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M2/outs/fragments.tsv.gz
+  B1_7218: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B1_7218/outs/fragments.tsv.gz
+  B2_7157: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B2_7157/outs/fragments.tsv.gz
+
+atac_peakbed:
+  M1_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M1/outs/peaks.bed
+  M2_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M2/outs/peaks.bed
+  B1_7218: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B1_7218/outs/peaks.bed
+  B2_7157: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B2_7157/outs/peaks.bed
+
+atac_metadata:
+  M1_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M1/outs/singlecell.csv
+  M2_atac: /mnt/cfce-rcsm/projects/yijiajiang_analysis/240226_X202SC24012007-Z01-F002_Sonsoles_scATAC_human/cellranger/M2/outs/singlecell.csv
+  B1_7218: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B1_7218/outs/singlecell.csv
+  B2_7157: /mnt/cfce-rcsm/projects/yijiajiang_analysis/230907_NovaSeq_scATAC/cellranger/B2_7157/outs/singlecell.csv
+
+
+#find . $PWD -name '*.narrowPeak.bed' 2>/dev/null
+# Project: scATAnno - annotation
+
+chromsize_file: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/hg38.chrom.sizes.txt # data/{assembly}/chrom.sizes.txt
+scatac_annotation_references:
+  PBMC: 
+    spikein: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/spikein_fragment_PBMC_narrowPeak.tsv
+    peak_bed: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/PBMC_merged_peaks.narrowPeak.filter.sorted.bed
+    h5ad: /mnt/cfce-rcsm/homes/yj976/projects/scATAnno/scATAnno-main/data/Reference/PBMC_reference_atlas_final.h5ad
+  # HealthyAdult:
+  #   spikein: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/spikein_fragment_PBMC_narrowPeak.tsv
+  #   peak_bed: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/PBMC_merged_peaks.narrowPeak.filter.sorted.bed
+  #   h5ad: /mnt/cfce-rcsm/homes/yj976/projects/scATAnno/scATAnno-main/data/Reference/Healthy_Adult_reference_atlas.h5ad
+  # TIL:
+  #   spikein: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/spikein_fragment_PBMC_narrowPeak.tsv
+  #   peak_bed: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/PBMC_merged_peaks.narrowPeak.filter.sorted.bed
+  #   h5ad: PBMC_reference.h5ad
+
+# scatac_annotation_references_spikein:
+#   PBMC: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/spikein_fragment_PBMC_narrowPeak.tsv
+#   # healthy: path
+#   # TIL: path
+#   # PBMC: path
+
+# scatac_annotation_references_bedfile: 
+#   PBMC: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/PBMC_merged_peaks.narrowPeak.filter.sorted.bed
+
+# scatac_annotation_references_h5ad: 
+#   PBMC: PBMC_reference.h5ad
+
+# atac_barcodes:
+ # M1: /mnt/cfce-rcsm/projects/development2/cfce_atac_annotation/BCC_GSE129785/software/QuickATAC/input/snapATAC_PBMC_multiome/ATAC_barcodes.csv
+
+
+

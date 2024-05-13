@@ -1,0 +1,20 @@
+---
+title: "single-cell pipeline"
+author: "author"
+output: html_document
+---
+## Some Tabs
+### Result {.tabset}
+
+```{r}
+# library(dplyr)
+```
+#### BI54
+```{r, echo=FALSE, fig.cap='QC before', out.width = '50%'}
+knitr::include_graphics('/Users/jiang/Dropbox (Partners HealthCare)/Single-cell_pipeline/scpipeline/scrna_20240322/analysis/BA-1_209_NormR_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC after', out.width = '50%'}
+knitr::include_graphics('/Users/jiang/Dropbox (Partners HealthCare)/Single-cell_pipeline/scpipeline/scrna_20240322/analysis/BA-1_209_NormR_QC_plot_after_original.png')
+```
+

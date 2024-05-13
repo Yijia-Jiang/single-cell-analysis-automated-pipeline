@@ -1,0 +1,346 @@
+---
+title: "single-cell pipeline"
+author: Yijia Jiang
+institute: CFCE -Dana Darber
+output: html_document
+---
+## scRNA-seq data
+### Result {.tabset}
+
+```{r}
+# library(dplyr)
+```
+#### BA-1_209_NormR_rna
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Doublet detection', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_UMAP_doublet.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_UMAP_by_cluster_number_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Celltype annotation based on breast markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_UMAP_by_celltype_breast_markerbased.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_DEG_heatmap_assign.ident.breast.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of breast atlas markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_UMAP_feature_plot_breast_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of immune cell markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/BA-1_209_NormR_rna_UMAP_feature_plot_immune_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='GSEA hallmark by cluster', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-1_209_NormR_rna/GSEA/BA-1_209_NormR_rna_per_cluster/BA-1_209_NormR_rna_per_cluster 1_HALLMARK_terms.png')
+```
+
+#### BA-8_374_NormL_rna
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Doublet detection', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_UMAP_doublet.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_UMAP_by_cluster_number_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Celltype annotation based on breast markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_UMAP_by_celltype_breast_markerbased.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_DEG_heatmap_assign.ident.breast.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of breast atlas markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_UMAP_feature_plot_breast_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of immune cell markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/BA-8_374_NormL_rna_UMAP_feature_plot_immune_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='GSEA hallmark by cluster', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BA-8_374_NormL_rna/GSEA/BA-8_374_NormL_rna_per_cluster/BA-8_374_NormL_rna_per_cluster 1_HALLMARK_terms.png')
+```
+
+#### BI54_rna
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Doublet detection', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_UMAP_doublet.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_UMAP_by_cluster_number_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Celltype annotation based on breast markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_UMAP_by_celltype_breast_markerbased.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_DEG_heatmap_assign.ident.breast.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of breast atlas markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_UMAP_feature_plot_breast_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of immune cell markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/BI54_rna_UMAP_feature_plot_immune_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='GSEA hallmark by cluster', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/BI54_rna/GSEA/BI54_rna_per_cluster/BI54_rna_per_cluster 1_HALLMARK_terms.png')
+```
+
+#### MGH23039R_rna
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Doublet detection', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_UMAP_doublet.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_UMAP_by_cluster_number_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='Celltype annotation based on breast markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_UMAP_by_celltype_breast_markerbased.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_DEG_heatmap_assign.ident.breast.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of breast atlas markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_UMAP_feature_plot_breast_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of immune cell markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/MGH23039R_rna_UMAP_feature_plot_immune_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='GSEA hallmark by cluster', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/single_sample/MGH23039R_rna/GSEA/MGH23039R_rna_per_cluster/MGH23039R_rna_per_cluster 1_HALLMARK_terms.png')
+```
+
+#### merge_1
+```{r, echo=FALSE, fig.cap='UMAP by samples before integration', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/merge_1_UMAP_by_sample_before_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP by samples after batch correction', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/merge_1_UMAP_by_sample_after_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='Celltype annotation based on breast markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/merge_1_UMAP_by_celltype_breast_markerbased.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/merge_1_DEG_heatmap_assign.ident.breast.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/merge_1_UMAP_feature_plot_breast_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of breast atlas markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/merge_1_UMAP_feature_plot_immune_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of immune cell markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_1/GSEA/merge_1_per_cluster/merge_1_per_cluster 1_HALLMARK_terms.png')
+```
+
+#### merge_2
+```{r, echo=FALSE, fig.cap='UMAP by samples before integration', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/merge_2_UMAP_by_sample_before_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP by samples after batch correction', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/merge_2_UMAP_by_sample_after_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='Celltype annotation based on breast markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/merge_2_UMAP_by_celltype_breast_markerbased.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/merge_2_DEG_heatmap_assign.ident.breast.png')
+```
+
+```{r, echo=FALSE, fig.cap='Heatmap of differentially expressed genes across annotated celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/merge_2_UMAP_feature_plot_breast_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of breast atlas markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/merge_2_UMAP_feature_plot_immune_markers.png')
+```
+
+```{r, echo=FALSE, fig.cap='Gene expression levels of immune cell markers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scRNA/integration/merge_2/GSEA/merge_2_per_cluster/merge_2_per_cluster 1_HALLMARK_terms.png')
+```
+
+
+## scATAC-seq data
+
+### Result {.tabset}
+#### B1_7218
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B1_7218/B1_7218_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B1_7218/B1_7218_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B1_7218/B1_7218_UMAP_by_cluster.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by scATAnno Annotation', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B1_7218/scATAnno_PBMC/celltype_assignment/query_assignment/Legend_side/umap_3.query_cluster_annotation.png')
+```
+
+#### B2_7157
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B2_7157/B2_7157_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B2_7157/B2_7157_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B2_7157/B2_7157_UMAP_by_cluster.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by scATAnno Annotation', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/B2_7157/scATAnno_PBMC/celltype_assignment/query_assignment/Legend_side/umap_3.query_cluster_annotation.png')
+```
+
+#### M1_atac
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M1_atac/M1_atac_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M1_atac/M1_atac_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M1_atac/M1_atac_UMAP_by_cluster.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by scATAnno Annotation', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M1_atac/scATAnno_PBMC/celltype_assignment/query_assignment/Legend_side/umap_3.query_cluster_annotation.png')
+```
+
+#### M2_atac
+```{r, echo=FALSE, fig.cap='QC metrics of cells before QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M2_atac/M2_atac_QC_plot_before_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='QC metrics of cells after QC filtering', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M2_atac/M2_atac_QC_plot_after_original.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by cluster numbers', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M2_atac/M2_atac_UMAP_by_cluster.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by scATAnno Annotation', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/single_sample/M2_atac/scATAnno_PBMC/celltype_assignment/query_assignment/Legend_side/umap_3.query_cluster_annotation.png')
+```
+
+#### merge_1
+```{r, echo=FALSE, fig.cap='UMAP by scATAC samples before integration', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/integration/merge_1/merge_1_UMAP_by_sample_before_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP by scATAC samples after batch correction', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/integration/merge_1/merge_1_UMAP_by_sample_after_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by scATAnno Annotation', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/integration/merge_1/scATAnno_PBMC/celltype_assignment/query_assignment/Legend_side/umap_3.query_cluster_annotation.png')
+```
+
+#### merge_2
+```{r, echo=FALSE, fig.cap='UMAP by scATAC samples before integration', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/integration/merge_2/merge_2_UMAP_by_sample_before_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP by scATAC samples after batch correction', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/integration/merge_2/merge_2_UMAP_by_sample_after_integration.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP Clustering by scATAnno Annotation', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scATAC/integration/merge_2/scATAnno_PBMC/celltype_assignment/query_assignment/Legend_side/umap_3.query_cluster_annotation.png')
+```
+
+
+## scRNA-scATAC integration 
+
+### Result {.tabset}
+#### merge_1
+```{r, echo=FALSE, fig.cap='UMAP integration by assays', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scMultiome/integration/merge_1/merge_1_RNA_ATAC_coembed_assay.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP integration by samples', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scMultiome/integration/merge_1/merge_1_RNA_ATAC_coembed_sample.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP integration by celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scMultiome/integration/merge_1/merge_1_RNA_ATAC_coembed_celltype.png')
+```
+
+#### merge_2
+```{r, echo=FALSE, fig.cap='UMAP integration by assays', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scMultiome/integration/merge_2/merge_2_RNA_ATAC_coembed_assay.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP integration by samples', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scMultiome/integration/merge_2/merge_2_RNA_ATAC_coembed_sample.png')
+```
+
+```{r, echo=FALSE, fig.cap='UMAP integration by celltypes', out.width = '60%', fig.topcaption=TRUE}
+knitr::include_graphics('analysis/scMultiome/integration/merge_2/merge_2_RNA_ATAC_coembed_celltype.png')
+```
+
